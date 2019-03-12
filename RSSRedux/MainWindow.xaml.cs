@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace RSSRedux
 {
@@ -29,7 +31,20 @@ namespace RSSRedux
         private void GoToArticle_OnClick(object sender, RoutedEventArgs e)
         {
             string path = (sender as Hyperlink).Tag as string;
+            Console.WriteLine(path);
             Process.Start(path);
+        }
+        private void testClick(object sender, RoutedEventArgs e)
+        {
+            string path = (sender as TextBlock).Tag as string;
+            Console.WriteLine(path);
+            desc.Text = path;
+            desc.Text = StripHTML(desc.Text);
+        }
+
+        public static string StripHTML(string input)
+        {
+            return Regex.Replace(input, "<.*?>", String.Empty);
         }
     }
 }

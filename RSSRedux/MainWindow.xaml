@@ -19,16 +19,16 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding XPath=title}" FontWeight="Bold">
-                        </TextBlock>
+                        <TextBlock Text="{Binding XPath=title}" Tag="{Binding InnerText, XPath=description}" FontWeight="Bold" PreviewMouseDown="testClick"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <StackPanel Orientation="Vertical" DataContext="{Binding ElementName=LB1,Path=SelectedItem}" Width="auto" Margin="0,288,0,-148.333" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Vertical" DataContext="{Binding ElementName=LB1,Path=SelectedItem}" Width="auto" Margin="0,288,0.286,-148.238" Grid.ColumnSpan="2" Height="262" VerticalAlignment="Top">
             <TextBlock Height="28" RenderTransformOrigin="0.5,0.5"><Hyperlink x:Name="GoToArticle" Tag="{Binding InnerText, XPath=link}" Click="GoToArticle_OnClick"><Run Text="Go to this article..."/></Hyperlink></TextBlock>
             <TextBlock Text="{Binding XPath=pubDate}" Width="auto" TextWrapping="Wrap"/>
-            <TextBlock Text="{Binding XPath=description}" Width="auto" TextWrapping="Wrap"/>
+            <TextBlock x:Name="desc" Width="auto" TextWrapping="Wrap"/>
+            <WebBrowser x:Name="myWebBrowser" />
         </StackPanel>
     </Grid>
 </Window>
