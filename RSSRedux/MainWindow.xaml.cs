@@ -34,17 +34,37 @@ namespace RSSRedux
             Console.WriteLine(path);
             Process.Start(path);
         }
-        private void testClick(object sender, RoutedEventArgs e)
+
+        public static BitmapImage getImageSource(string input)
         {
-            string path = (sender as TextBlock).Tag as string;
-            Console.WriteLine(path);
-            desc.Text = path;
-            desc.Text = StripHTML(desc.Text);
+            string imageSource = Regex.Match(input, "<img.+?src=[\"'](.+?)[\"'].*?>", RegexOptions.IgnoreCase).Groups[1].Value;
+            BitmapImage logo = new BitmapImage();
+            try
+            {
+                logo.BeginInit();
+                logo.UriSource = new Uri(imageSource);
+                logo.EndInit();
+                Console.WriteLine(imageSource); //link to the image
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return logo;
         }
 
         public static string StripHTML(string input)
         {
             return Regex.Replace(input, "<.*?>", String.Empty);
+        }
+
+        private void title_OnClick(object sender, MouseButtonEventArgs e)
+        {
+            string path = (sender as TextBlock).Tag as string;
+            Console.WriteLine(path); // the whole description including tags
+            desc.Text = path;
+            desc.Text = StripHTML(desc.Text);
+            imageLink.Source = getImageSource(path);
         }
     }
 }

@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSSRedux"
         mc:Ignorable="d"
-        Title="MainWindow" Height="532" Width="800">
+        Title="MainWindow" Height="532" Width="797">
     <Window.Resources>
-        <XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://rss.cbc.ca/lineup/canada.xml">
+        <!--<XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://rss.cbc.ca/lineup/canada.xml">-->
+        <XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://finance.yahoo.com/rss/topstories">
         </XmlDataProvider>
     </Window.Resources>
     <Grid Margin="0,0,0,101.667">
@@ -19,7 +20,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding XPath=title}" Tag="{Binding InnerText, XPath=description}" FontWeight="Bold" PreviewMouseDown="testClick"/>
+                        <TextBlock Text="{Binding XPath=title}" Tag="{Binding InnerText, XPath=description}" FontWeight="Bold" Width="760" PreviewMouseDown="title_OnClick"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -28,7 +29,7 @@
             <TextBlock Height="28" RenderTransformOrigin="0.5,0.5"><Hyperlink x:Name="GoToArticle" Tag="{Binding InnerText, XPath=link}" Click="GoToArticle_OnClick"><Run Text="Go to this article..."/></Hyperlink></TextBlock>
             <TextBlock Text="{Binding XPath=pubDate}" Width="auto" TextWrapping="Wrap"/>
             <TextBlock x:Name="desc" Width="auto" TextWrapping="Wrap"/>
-            <WebBrowser x:Name="myWebBrowser" />
+            <Image x:Name="imageLink" Width="100" Height="100" Margin="10,0,0,0"/>
         </StackPanel>
     </Grid>
 </Window>
