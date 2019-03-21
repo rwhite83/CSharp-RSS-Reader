@@ -66,5 +66,19 @@ namespace RSSRedux
             desc.Text = StripHTML(desc.Text);
             imageLink.Source = getImageSource(path);
         }
+
+        private void title_onClick(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void title_onClick(object sender, RoutedEventArgs e)
+        {
+            string path = (sender as TextBlock).Tag as string;
+            Console.WriteLine(path); // the whole description including tags
+            desc.Text = path;
+            desc.Text = StripHTML(desc.Text);
+            imageLink.Source = getImageSource(path);
+        }
     }
 }
