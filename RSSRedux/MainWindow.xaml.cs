@@ -104,7 +104,8 @@ namespace RSSRedux
         /// <param name="e"></param>
         private void btnAdd_click(object sender, RoutedEventArgs e)
         {
-            new 
+            formAddRSS newRSS = new formAddRSS();
+            newRSS.Show();
         }
 
         /// <summary>

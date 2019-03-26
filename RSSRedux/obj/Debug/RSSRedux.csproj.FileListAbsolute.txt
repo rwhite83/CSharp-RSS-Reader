@@ -60,5 +60,5 @@ C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Reposito
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\obj\Debug\RSSRedux.pdb
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\bin\Debug\RSSFeeedPopUp.dll
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\bin\Debug\RSSFeeedPopUp.pdb
-C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\obj\Debug\RSSRedux.Form1.resources
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\obj\Debug\RSSRedux.csproj.CopyComplete
+C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\obj\Debug\RSSRedux.formAddRSS.resources
