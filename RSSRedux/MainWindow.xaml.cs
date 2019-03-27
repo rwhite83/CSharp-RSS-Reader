@@ -104,7 +104,7 @@ namespace RSSRedux
         /// <param name="e"></param>
         private void btnAdd_click(object sender, RoutedEventArgs e)
         {
-            new 
+            //new 
         }
 
         /// <summary>
@@ -153,9 +153,24 @@ namespace RSSRedux
             if (lbi != null)
             {
                 //Console.WriteLine(lbi.Content.ToString() + " is selected.");
-                Console.WriteLine(lewis + " is selected!");
-                //label1.Content = lewis;
-                LB1.ItemsSource = "https://rss.cbc.ca/lineup/canada.xml"; // DOES NOT WORK
+                //Console.WriteLine(lewis + " is selected!");
+                ////label1.Content = lewis;
+                //Console.WriteLine(LB1.ItemsSource.ToString());
+                //(this.Resources["rssSource"] as XmlDataProvider).Source = new Uri("http://feeds.bbci.co.uk/news/rss.xml");
+
+                //XmlDataProvider xdp = FindResource("DataRss") as XmlDataProvider;
+                //xdp.Source = new Uri("http://feeds.bbci.co.uk/news/rss.xml", UriKind.RelativeOrAbsolute);
+                ////Console.WriteLine(xdp);
+
+                //LB1.ItemsSource = "https://rss.cbc.ca/lineup/canada.xml"; // DOES NOT WORK
+                //desc.Text = xdp.Source.ToString();
+                //InvalidateVisual();
+
+                XmlDataProvider provider = this.Resources["DataRss"] as XmlDataProvider;
+                if (provider != null)
+                {
+                    provider.Source = new Uri("https://rss.cbc.ca/lineup/canada.xml");
+                }
             }
         }
     }
