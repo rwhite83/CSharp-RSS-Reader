@@ -9,7 +9,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSSRedux"
         mc:Ignorable="d"
-        Title="MainWindow" Height="532" Width="797">
+        Title="MainWindow" Height="664.242" Width="943.285">
     <Window.Resources>
         <!--<XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://rss.cbc.ca/lineup/canada.xml">-->
         <XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://finance.yahoo.com/rss/topstories">
@@ -18,7 +18,7 @@
         </XmlDataProvider>
     </Window.Resources>
 
-    <Grid Margin="0,0,0,101.8" Height="403" VerticalAlignment="Bottom">
+    <Grid Margin="0,0,-6.286,-19.143">
         <!--
         Sebastian made the two windows happen and is currently working on making the options on the left
         selectable in such a way that they appear on the right
@@ -44,7 +44,7 @@
             </Menu>
         </StackPanel>
         <!--<StackPanel Grid.ColumnSpan="2" Margin="0,0,10,0">-->
-        <DockPanel Grid.ColumnSpan="2" Margin="0,0,10,0" Height="283" VerticalAlignment="Top">
+        <DockPanel Grid.ColumnSpan="2" Margin="0,0,10,212.572">
             <ListBox Name="leftListBox" Margin="0,72,0,0.2" Grid.Column="0" DockPanel.Dock="Left" Width="219">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -74,12 +74,13 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
-        <DockPanel DataContext="{Binding ElementName=LB1,Path=SelectedItem}" Width="auto" Margin="0,0,0,-104" Grid.ColumnSpan="2" Height="224" VerticalAlignment="Bottom">
-            <TextBlock RenderTransformOrigin="0.509,-2.479" Width="100" Margin="0,0,0,199"><Hyperlink x:Name="GoToArticle" Tag="{Binding InnerText, XPath=link}" Click="GoToArticle_OnClick"><Run Text="Go to this article..."/></Hyperlink></TextBlock>
-            <TextBlock Text="{Binding XPath=pubDate}" Width="auto" TextWrapping="Wrap"/>
-            <TextBlock Text="{Binding XPath=desc}" x:Name="desc" Width="auto" TextWrapping="Wrap"/>
-            <Image x:Name="imageLink"/>
-
+        <DockPanel DataContext="{Binding ElementName=LB1,Path=SelectedItem}" Grid.ColumnSpan="2" Height="208" Margin="0,0,0,-0.428" VerticalAlignment="Bottom" >
+            <Image x:Name="imageLink" Margin="10,10,10,10" Width="221" Height="191" VerticalAlignment="Top"/>
+            <StackPanel Margin="10,10,10,10">
+                <TextBlock ><Hyperlink x:Name="GoToArticle" Tag="{Binding InnerText, XPath=link}" Click="GoToArticle_OnClick"><Run Text="Go to this article..."/></Hyperlink></TextBlock>
+                <TextBlock Text="{Binding XPath=pubDate}" Width="auto" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding XPath=desc}" x:Name="desc"  TextWrapping="Wrap"/>
+            </StackPanel>
         </DockPanel>
     </Grid>
 </Window>
