@@ -53,8 +53,9 @@
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
-                <ListBoxItem Name="lbCBC" Selected="OnSelected">CBC</ListBoxItem>
-                <ListBoxItem Name="lbBBC" Selected="OnSelected">BBC</ListBoxItem>
+                <ListBoxItem Name="lbCBC" Tag="https://rss.cbc.ca/lineup/canada.xml" Selected="OnSelected">CBC</ListBoxItem>
+                <ListBoxItem Name="lbBBC" Tag="http://feeds.bbci.co.uk/news/rss.xml" Selected="OnSelected">BBC</ListBoxItem>
+                <ListBoxItem Name="lbYahooFin" Tag="https://finance.yahoo.com/rss/topstories" Selected="OnSelected">Yahoo Finance</ListBoxItem>
             </ListBox>
 
             <!--
@@ -68,7 +69,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Name="LBI" PreviewGotKeyboardFocus="itemSelected1" Text="{Binding XPath=title}" Tag="{Binding InnerText, XPath=description}" FontWeight="Bold" Width="760" PreviewMouseDown="title_OnClick" Focusable="true" />
+                            <TextBlock Name="LBI" Text="{Binding XPath=title}" Tag="{Binding InnerText, XPath=description}" FontWeight="Bold" Width="760" PreviewMouseDown="title_OnClick" Focusable="true" />
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

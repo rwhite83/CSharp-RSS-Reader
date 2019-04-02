@@ -37,9 +37,17 @@ namespace RSSRedux
         /// <param name="e"></param>
         private void GoToArticle_OnClick(object sender, RoutedEventArgs e)
         {
-            string path = (sender as Hyperlink).Tag as string;
-            Console.WriteLine(path);
-            Process.Start(path);
+            try
+            {
+                string path = (sender as Hyperlink).Tag as string;
+                Console.WriteLine(path);
+                Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
         }
 
         /// <summary>
@@ -82,7 +90,7 @@ namespace RSSRedux
         /// <param name="e"></param>
         private void title_OnClick(object sender, MouseButtonEventArgs e)
         {
-            string path = (sender as TextBox).Tag as string;
+            string path = (sender as TextBlock).Tag as string;
             Console.WriteLine(path); // the whole description including tags
             desc.Text = path;
             desc.Text = StripHTML(desc.Text);
@@ -109,6 +117,7 @@ namespace RSSRedux
         {
             formAddRSS newRSS = new formAddRSS();
             newRSS.Show();
+            //newRSS.
         }
 
         /// <summary>
@@ -149,17 +158,11 @@ namespace RSSRedux
         /// <param name="e"></param>
         private void OnSelected(object sender, RoutedEventArgs e)
         {
-            ListBoxItem lbi = e.Source as ListBoxItem;
-
-            ListBoxItem listBox = (ListBoxItem)sender;
-            String lewis = listBox.ToString();
-
-            if (lbi != null)
+            XmlDataProvider provider = this.Resources["DataRss"] as XmlDataProvider;
+            if (provider != null)
             {
-                //Console.WriteLine(lbi.Content.ToString() + " is selected.");
-                Console.WriteLine(lewis + " is selected!");
-                //label1.Content = lewis;
-                LB1.ItemsSource = "https://rss.cbc.ca/lineup/canada.xml"; // DOES NOT WORK
+                string path = (sender as ListBoxItem).Tag as string;
+                provider.Source = new Uri(path);
             }
         }
     }
