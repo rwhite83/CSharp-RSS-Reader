@@ -28,6 +28,8 @@ namespace RSSRedux
             InitializeComponent();
         }
 
+        String path;
+
         /// <summary>
         /// handles clicking a feed item
         /// </summary>
@@ -85,6 +87,7 @@ namespace RSSRedux
             desc.Text = path;
             desc.Text = StripHTML(desc.Text);
             imageLink.Source = getImageSource(path);
+            //path = getImageSource(path);
         }
 
         /// <summary>
