@@ -12,10 +12,10 @@
         Title="MainWindow" Height="532" Width="797">
     <Window.Resources>
         <!--<XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://rss.cbc.ca/lineup/canada.xml">-->
-        <XmlDataProvider x:Key="DataRss" XPath="//item" Source="https://finance.yahoo.com/rss/topstories">
+        <XmlDataProvider x:Name="rssSource" x:Key="DataRss" XPath="//item" Source="https://finance.yahoo.com/rss/topstories">
         </XmlDataProvider>
-        <XmlDataProvider x:Key="BBCRss" XPath="//item" Source="http://feeds.bbci.co.uk/news/rss.xml">
-        </XmlDataProvider>
+        <!--<XmlDataProvider x:Key="BBCRss" XPath="//item" Source="http://feeds.bbci.co.uk/news/rss.xml">
+        </XmlDataProvider>-->
     </Window.Resources>
 
     <Grid Margin="0,0,0,101.5" Height="403" VerticalAlignment="Bottom">
@@ -71,6 +71,9 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <DockPanel>
+            
+        </DockPanel>
         <StackPanel Orientation="Vertical" DataContext="{Binding ElementName=LB1,Path=SelectedItem}" Width="auto" Margin="0,288,0.286,-148.238" Grid.ColumnSpan="2" Height="262" VerticalAlignment="Top">
             <TextBlock Height="28" RenderTransformOrigin="0.5,0.5"><Hyperlink x:Name="GoToArticle" Tag="{Binding InnerText, XPath=link}" Click="GoToArticle_OnClick"><Run Text="Go to this article..."/></Hyperlink></TextBlock>
             <TextBlock Text="{Binding XPath=pubDate}" Width="auto" TextWrapping="Wrap"/>

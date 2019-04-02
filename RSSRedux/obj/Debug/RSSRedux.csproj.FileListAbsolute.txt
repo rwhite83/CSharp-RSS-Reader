@@ -62,3 +62,21 @@ C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Reposito
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\bin\Debug\RSSFeeedPopUp.pdb
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\obj\Debug\RSSRedux.Form1.resources
 C:\Users\rwhit\OneDrive\BCIT Term 3\COMP 3951 - Technical Programming I\Repository\RSSRedux\rssReader\RSSRedux\obj\Debug\RSSRedux.csproj.CopyComplete
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.csprojAssemblyReference.cache
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\MainWindow.g.cs
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\App.g.cs
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux_MarkupCompile.cache
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux_MarkupCompile.lref
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.exe
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.pdb
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\bin\Debug\RSSRedux.exe.config
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\bin\Debug\RSSRedux.exe
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\bin\Debug\RSSRedux.pdb
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\bin\Debug\RSSFeeedPopUp.pdb
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\MainWindow.baml
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.g.resources
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.formAddRSS.resources
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.Properties.Resources.resources
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.csproj.GenerateResource.cache
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.csproj.CoreCompileInputs.cache
+C:\Users\Adrian\source\repos\rssCopy\rssReader\RSSRedux\obj\Debug\RSSRedux.csproj.CopyComplete
